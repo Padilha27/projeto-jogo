@@ -74,12 +74,7 @@ public class ChessMatch {
 		
 		check = (testCheck(opponent(currentPlayer))) ? true : false;
 		
-		if (testCheckMate(opponent(currentPlayer))) {
-			checkMate = true;
-		}
-		else {
-		    nextTurn();
-		}
+		nextTurn();
 		return (ChessPiece)capturedPiece;
 	}
 	
@@ -157,7 +152,7 @@ public class ChessMatch {
 		return false;
 	}
 	
-	private boolean testCheckMate(Color color) {
+	private boolean testCheck(Color color) {
 		if (!testCheck(color)) {
 			return false;
 		}
